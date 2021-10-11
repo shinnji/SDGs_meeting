@@ -22,6 +22,7 @@
             <div class="media">
               <div class="media-content">
                 <p class="title is-4"><%= @post.title %></p>
+                <p class="title is-4"><%= render 'posts/favorite.html.erb', post: @post %></p>
               </div>
             </div>
             <div class="content">

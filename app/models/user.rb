@@ -4,7 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :posts, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   attachment :profile_image
 
   validates :username, presence: true
+  
+  def already_favorited?(post)
+    self.favorites.exists?(post_id: post.id)
+  end 
 end
