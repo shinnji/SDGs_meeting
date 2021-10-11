@@ -1,0 +1,6 @@
+<%= link_to user_relationships_path(user), method: :post do %>
+  <button class = "btn btn-primary">フォロー</button>
+<% end %>
+  <%= link_to user_relationships_path(user), method: :delete do %>
+    <button class = "btn btn-primary">フォロー解除</button>
+<% end %>
