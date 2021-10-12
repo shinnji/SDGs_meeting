@@ -16,4 +16,9 @@ class User < ApplicationRecord
   def already_favorited?(post)
     self.favorites.exists?(post_id: post.id)
   end 
+  
+  def is_followed_by?(user)
+    reverse_of_relationships.find_by(following_id: user.id).present?
+  end
+  
 end

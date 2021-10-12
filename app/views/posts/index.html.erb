@@ -30,19 +30,7 @@
                 </div>
                 <div class="media-content">
                   <div class="title"><%=link_to post.user.username, user_path(post.user) %></div>
-                   <div class="title">
-                    <% if current_user.already_favorited?(post) %>
-                      <%= link_to post_favorites_path(post), method: :delete do %>
-                        <i class="fas fa-heart"></i>
-                      <% end %>
-                        <%= post.favorites.count %>
-                    <% else %>
-                      <%= link_to post_favorites_path(post), method: :post do %>
-                        <i class="far fa-heart"></i>
-                      <% end %>
-                      <%= post.favorites.count %>
-                    <% end %>
-                   </div>
+                   <div id="favorite_buttons_<%= post.id %>"><%= render "favorites/favorite", post: post %></div>
                 </div>
               </div>
             </div>
