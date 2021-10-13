@@ -67,3 +67,5 @@ gem "refile-mini_magick"
 gem "bulma-rails"
 gem 'jquery-rails'
 gem 'kaminari'
+
+
