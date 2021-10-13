@@ -9,8 +9,8 @@
       <i class="far fa-heart"></i>
     <% end %>
     <%= post.favorites.count %>
-    <% end %>
-  <% else %>
-    <i class="far fa-heart"></i>
-    <%= post.favorites.count %>
   <% end %>
+<% else %>
+  <i class="far fa-heart"></i>
+  <%= post.favorites.count %>
+<% end %>
