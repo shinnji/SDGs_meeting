@@ -68,4 +68,9 @@ gem "bulma-rails"
 gem 'jquery-rails'
 gem 'kaminari'
 
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
+
 
