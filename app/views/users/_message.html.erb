@@ -1,0 +1,12 @@
+<% if isRoom == true %>
+    <button type="button" class="btn btn btn-primary"><a href="/rooms/<%= roomId %>">チャットへ</button>
+<% else %>
+  <%= form_for room do |f| %>
+    <%= fields_for entry do |e| %>
+      <%= e.hidden_field :user_id, :value=> user.id %>
+    <% end %>
+     <%= f.submit "チャットを始める" %>
+  <% end %>
+<% end %>
+
+<button type="button" class="btn btn btn-primary"><%= link_to "ユーザー一覧に戻る", users_path %></button>

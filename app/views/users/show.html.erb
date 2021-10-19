@@ -43,6 +43,7 @@
                 <% else %>
                 <td>
                   <%= render 'users/follow.html.erb', user: @user %>
+                  <%= render 'users/message.html.erb', isRoom: @isRoom, roomId: @roomId, room: @room, entry: @entry, user: @user %>
                 <% end %>
                 <% end %>
                 </td>
