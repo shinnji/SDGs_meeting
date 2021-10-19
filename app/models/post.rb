@@ -8,4 +8,8 @@ class Post < ApplicationRecord
     validates :body
     validates :image
   end
+  
+  def self.search(keyword)
+  where(["title like? OR body like?", "%#{keyword}%", "%#{keyword}%"])
+  end
 end

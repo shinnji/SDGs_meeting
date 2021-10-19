@@ -21,4 +21,9 @@ class User < ApplicationRecord
     reverse_of_relationships.find_by(following_id: user.id).present?
   end
   
+  # # is_deletedがfalseならtrueを返すようにしている
+  # def active_for_authentication?
+  #   super && (is_deleted == false)
+  # end
+  
 end

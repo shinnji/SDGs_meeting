@@ -57,6 +57,9 @@
                   <%= link_to "お問い合わせ", inquiry_path, class: "button is-warning is-light" %>
                 </p>
                 <p class="control">
+                  <%= link_to "サイト詳細", about_path, class: "button is-warning is-light" %>
+                </p>
+                <p class="control">
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
                 </p>
               </div>
@@ -72,6 +75,9 @@
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
+                  <%= link_to "サイト詳細", about_path, class: "button is-warning is-light" %>
+                </p>
+                <p class="control">
                   <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
                 </p>
                 <p class="control">
@@ -82,7 +88,9 @@
           </div>
         </div>
       <% end %>
-
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </nav>
     <%= yield %>
   </body>

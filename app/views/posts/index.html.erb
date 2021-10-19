@@ -7,7 +7,7 @@
     </div>
   </div>
 </section>
-
+<%= render "posts/search", keyword: @keyword, posts: @posts %>
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
@@ -30,6 +30,7 @@
                 </div>
                 <div class="media-content">
                   <div class="title"><%=link_to post.user.username, user_path(post.user) %></div>
+                  <div class="title"><%=link_to post.title, post_path(post) %></div>
                    <div id="favorite_buttons_<%= post.id %>"><%= render "favorites/favorite", post: post %></div>
                 </div>
               </div>
@@ -39,6 +40,7 @@
       <% end %>
     </div>
   </div>
+  <!--kaminari-->
   <%= paginate @posts %>
 </section>
 

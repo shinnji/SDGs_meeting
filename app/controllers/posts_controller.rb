@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.page(params[:page]).per(3)
+    @posts = Post.all.page(params[:page]).per(3)
   end
 
   def show
@@ -37,6 +37,13 @@ class PostsController < ApplicationController
     post.destroy
     redirect_to posts_path
   end
+  
+  def search
+    @posts = Post.search(params[:keyword]).page(params[:page]).per(3)
+    @keyword = params[:keyword]
+    render "index"
+  end
+
 
   private
   def post_params
