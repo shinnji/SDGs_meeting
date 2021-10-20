@@ -1,0 +1,10 @@
+<% visitor = notification.visitor %>
+<% visited = notification.visited %>
+<div>
+ <%= link_to user_path(visitor) do %>
+     <%= visitor.username %>さんが
+ <% end %>
+ <% if notification.action=='dm' %>
+    あなたにDMを送りました
+ <% end %>
+</div>

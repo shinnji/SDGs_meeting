@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'notifications/index'
   get 'search' => 'posts#search'
   get 'inquiry/index'
   get 'inquiry/confirm'
