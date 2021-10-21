@@ -67,6 +67,7 @@ gem "refile-mini_magick"
 gem "bulma-rails"
 gem 'jquery-rails'
 gem 'kaminari'
+gem 'pry-rails'
 
 gem 'dotenv-rails'
 group :production do

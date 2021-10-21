@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'notifications/index'
+  resources :notifications, only: [:index, :update]
   get 'search' => 'posts#search'
   get 'inquiry/index'
   get 'inquiry/confirm'

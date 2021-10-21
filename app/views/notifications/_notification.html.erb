@@ -1,10 +1,15 @@
-<% visitor = notification.visitor %>
-<% visited = notification.visited %>
-<div>
- <%= link_to user_path(visitor) do %>
-     <%= visitor.username %>さんが
- <% end %>
- <% if notification.action=='dm' %>
-    あなたにDMを送りました
- <% end %>
-</div>
+<% if notification.checked == false %>
+ <% visitor = notification.visitor %>
+ <% visited = notification.visited %>
+ <div>
+  <%= link_to user_path(visitor) do %>
+      <%= visitor.username %>さんが
+  <% end %>
+  <% if notification.action=='dm' %>
+     あなたにDMを送りました
+  <% end %>
+   <button type="button" class="btn btn btn-primary">
+    <%= link_to '既読にする',notifications_index_path(notification.id),method: :put %>
+   </button>
+ </div>
+<% end %> 
