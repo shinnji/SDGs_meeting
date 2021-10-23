@@ -38,32 +38,32 @@
       <% if user_signed_in? %>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "投稿一覧", posts_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "投稿一覧", posts_path, class: "navbar-item button is-warning is-light fas fa-book" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "新規投稿", new_post_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "新規投稿", new_post_path, class: "navbar-item button is-warning is-light fas fa-plus" %>
           </div>
 
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <%= link_to "ユーザー一覧", users_path, class: " button is-warning is-light" %>
+                  <%= link_to "ユーザー一覧", users_path, class: " button is-warning is-light fas fa-users" %>
                 </p>
                 <p class="control">
-                  <%= link_to "マイページ", user_path(current_user), class: "button is-warning is-light" %>
+                  <%= link_to "マイページ", user_path(current_user), class: "button is-warning is-light fas fa-user-circle" %>
                 </p>
                  <p class="control">
-                  <%= link_to "お問い合わせ", inquiry_path, class: "button is-warning is-light" %>
+                  <%= link_to "お問い合わせ", inquiry_path, class: "button is-warning is-light fas fa-headset" %>
                 </p>
                 <p class="control">
-                  <%= link_to "サイト詳細", about_path, class: "button is-warning is-light" %>
+                  <%= link_to "サイト詳細", about_path, class: "button is-warning is-light fas fa-globe-americas" %>
                 </p>
                  <p class="control">
-                  <%= link_to "通知", notifications_index_path, class: "button is-warning is-light" %>
+                  <%= link_to "通知", notifications_index_path, class: "button is-warning is-light fas fa-bell" %>
                 </p>
                 <p class="control">
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light fas fa-sign-out-alt" %>
                 </p>
               </div>
             </div>
