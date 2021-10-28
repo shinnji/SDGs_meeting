@@ -29,7 +29,11 @@
                   </figure>
                 </div>
                 <div class="media-content">
+                  <% if user_signed_in? %>
                   <div class="title"><%=link_to post.user.username, user_path(post.user) %></div>
+                  <% else %>
+                  <div class="title"><%= post.user.username %></div>
+                  <% end %>
                   <div class="title"><%=link_to post.title, post_path(post) %></div>
                    <div id="favorite_buttons_<%= post.id %>"><%= render "favorites/favorite", post: post %></div>
                 </div>
