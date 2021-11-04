@@ -33,6 +33,10 @@
                   <td><%= simple_format @post.body %></td>
                 </tr>
               </table>
+              <p>AIによるタグ</p>
+              <% @post.tags.each do |tag| %>
+                <span class="label"><%= tag.name %></span>
+              <% end %>
               <% if user_signed_in? %>
               <% if @post.user.id == current_user.id %>
                 <%= link_to "編集画面へ", edit_post_path(@post), class: "button is-success" %>

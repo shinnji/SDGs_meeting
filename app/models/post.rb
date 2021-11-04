@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   attachment :image
   belongs_to :user
   has_many :favorites, dependent: :destroy
+  has_many :tags, dependent: :destroy
 
   with_options presence: true do
     validates :title
